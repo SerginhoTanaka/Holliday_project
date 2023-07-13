@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+
+</head>
+<body>
+    {% block content %}
+    <h1>Feriados</h1>
+    <form action="{% url 'index' %}">
+        <select id="selectedYear" name="selectedYear" >Selecione o ano</select>
+        <input type="submit">
+    </form>
+    
+
+    <table class="holiday-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for feriado in feriados %}
+                <tr>
+                    <td>{{ feriado.name }}</td>
+                    <td>{{ feriado.date }}</td>
+                    <td>{{ feriado.type }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
+<script src="../../static/js/script.js"></script>
+</body>
+
+</html>

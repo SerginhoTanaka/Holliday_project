@@ -1,0 +1,40 @@
+.holiday-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.holiday-table th,
+.holiday-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.holiday-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.holiday-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.holiday-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.holiday-table td:first-child {
+  border-left: none;
+}
+
+.holiday-table td:last-child {
+  border-right: none;
+}
+
+.holiday-table th:first-child {
+  border-left: none;
+}
+
+.holiday-table th:last-child {
+  border-right: none;
+}
